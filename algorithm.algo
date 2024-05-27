@@ -1,0 +1,23 @@
+ALGORITHM checkpoint1
+VAR
+    sentence : STRING
+    Length_sentence : INTEGER
+    word : INTEGER := 0 ;
+    voyel : INTEGER := 0;
+BEGIN
+    Read(sentence);
+    Length_sentence := Length(sentence);
+    FOR i FROM 0 TO Length(sentence)-1 STEP  DO
+        IF (sentence[i] = " ") THEN
+            word := word+1
+        END_IF
+        
+        IF (sentence [i] = "a" OR sentence [i] = "e" OR sentence [i] = "i" OR sentence [i] = "o" OR sentence [i] = "u"OR sentence [i] = "y" ) THEN
+            voyel := voyel+1
+        END_IF
+
+    END_FOR 
+    WRITE(Length_sentence)
+    WRITE(word)
+    WRITE(voyel)
+END
